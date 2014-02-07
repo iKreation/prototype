@@ -50,9 +50,9 @@ Recommended Documentation
 
 Deadlines
 =========
-Yesterday - Start exploring the technologies and methodologies 
-February 12 - You should have a grasp knowledge of all the development stack, start developing the prototype
-February 24 - Deliver the prototype
+- Yesterday - Start exploring the technologies and methodologies 
+- February 12 - You should have a grasp knowledge of all the development stack, start developing the prototype
+- February 24 - Deliver the prototype
 
 This will be some hard days, but are of utmost importance to integrate you in the team.
 
