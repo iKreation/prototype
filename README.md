@@ -10,11 +10,6 @@ Features this application should have
   - Use Google Maps SDK to draw points, lines and polygons on Google Map Tiles, this draws should be saved on a MongoDB collection, and fetched/displayed when you click on place to see details.
   - Inputs the places should have [ name - required, description - optional, LatLng (coordinates) - required, photos - required ]
 
-
-![Example1](https://www.dropbox.com/s/y4o133kkb11ltqz/picture1.png)
-![Example2](https://www.dropbox.com/s/hv29956540k0x7u/picture2.png)
-![Example3](https://www.dropbox.com/s/lg0cmgujxuolkv2/picture3.png)
-
 Technologies
 =========
 - You will need to run a HTTP Reverse Proxy server called NGINX ( not the usual apache )
