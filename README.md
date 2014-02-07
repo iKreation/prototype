@@ -23,7 +23,7 @@ Agile Development
 =========
 scrum
 
-Recomended Documentation
+Recommended Documentation
 =========
 documentation
 
