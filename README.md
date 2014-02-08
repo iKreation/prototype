@@ -49,17 +49,17 @@ http://www.django-rest-framework.org/
 http://tastypieapi.org/
 http://stackoverflow.com/questions/656979/django-and-restful-apis
 
-Front-End + MV* + Google Maps SDK
+Front-End + MV* + Google Maps SDK<p>
 http://getbootstrap.com/
 http://backbonejs.org/
 https://developers.google.com/maps/documentation/javascript/
 https://developers.google.com/maps/documentation/javascript/overlays?hl=en
 
-Databases + Django
+Databases + Django<p>
 https://docs.djangoproject.com/en/dev/ref/databases/
 https://django-mongodb-engine.readthedocs.org/en/latest/
 
-Vagrant
+Vagrant<p>
 http://www.vagrantup.com/
 
 Testing
@@ -71,6 +71,7 @@ http://www.iterm2.com/
 https://github.com/stephencelis/ghi
 http://git-scm.com/docs/gittutorial
 http://www.sequelpro.com/
+https://pypi.python.org/pypi/pip
 
 
 Deadlines
