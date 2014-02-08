@@ -41,7 +41,7 @@ All issues should go to this GitHub repository Issues.
 
 Recommended Documentation
 =========
-Server and Web Framework
+<h2>Server and Web Framework</h2>
 http://wiki.nginx.org/Main
 https://code.djangoproject.com/wiki/DjangoAndNginx
 https://docs.djangoproject.com/en/1.6/
@@ -49,24 +49,24 @@ http://www.django-rest-framework.org/
 http://tastypieapi.org/
 http://stackoverflow.com/questions/656979/django-and-restful-apis
 
-Front-End + MV* + Google Maps SDK<p>
+<h2>Front-End + MV* + Google Maps SDK</h2>
 http://getbootstrap.com/
 http://backbonejs.org/
 https://developers.google.com/maps/documentation/javascript/
 https://developers.google.com/maps/documentation/javascript/overlays?hl=en
 
-Databases + Django<p>
+<h2>Databases + Django</h2>
 https://docs.djangoproject.com/en/dev/ref/databases/
 https://django-mongodb-engine.readthedocs.org/en/latest/
 
-Vagrant<p>
+<h2>Vagrant</h2>
 http://www.vagrantup.com/
 
-Testing
+<h2>Testing</h2>
 https://docs.djangoproject.com/en/dev/topics/testing/
 https://docs.djangoproject.com/en/dev/topics/testing/overview/
 
-Tools
+<h2>Tools</h2>
 http://www.iterm2.com/
 https://github.com/stephencelis/ghi
 http://git-scm.com/docs/gittutorial
