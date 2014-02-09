@@ -32,7 +32,7 @@ Recommended Tools
 Requirements
 =========
 - Implement Test Driven Development
-- Atleast backend code should be tested ( UnitTest ), there are libraries that easy this
+- Atleast backend code should be tested ( UnitTest ), there are libraries that ease this
 
 Issues
 =========
