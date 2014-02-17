@@ -1,0 +1,12 @@
+<html>
+<head>
+	<title>List view</title>
+</head>
+<body>
+	<ul>
+	{% for p in query %}
+		<li> {{ p.title }} </li>
+	{% endfor %}
+	</ul>
+</body>
+</html>
