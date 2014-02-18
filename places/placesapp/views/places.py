@@ -4,6 +4,28 @@ from placesapp.models import *
 import simplejson as json
 from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt
+def rest(request, ident):
+	if request.method == 'GET':
+		if int(ident) == 0:
+			return places_list(request)
+		else:
+			return get(request, ident)
+	elif request.method == 'POST' or request.method == 'PUT':
+		if int(ident) == 0:
+			return create(request)
+		else:
+			return update(request, ident)
+	elif request.method == 'DELETE':
+		return delete(request, ident)
+	else:
+		return HttpResponse(json.dumps({
+									'success': False, 
+									'msg': 'Invalid request method.'
+								}), content_type='json')
+
+
+
 def hello(request, ident, category):
 	obj = {} # create dict
 	obj['ident'] = ident # set value of ident
@@ -13,7 +35,7 @@ def hello(request, ident, category):
 	t = loader.get_template('hello_world.html')
 	return HttpResponse(t.render(RequestContext(request, obj)))
 
-def list(request):
+def places_list(request):
 	# import model
 	# make the query to get all the places
 	# load the view 
@@ -86,33 +108,30 @@ def update(request, ident):
 	# find the object and check if exists
  	# update the object
 
- 	if request.method == 'POST':
+ 	if request.method == 'PUT':
+ 		title = request.PUT['title']
+		description = request.PUT['description']
+		coordinate = request.PUT['coordinate']
 
+ 	elif request.method == 'POST':
  		title = request.POST['title']
 		description = request.POST['description']
 		coordinate = request.POST['coordinate']
 
-	 	try:
-	 		p = Places.objects.get(id = ident)
-	 		p.title = title
-	 		p.description = description
-	 		p.coordinate = coordinate
-	 		p.save()
+ 	try:
+ 		p = Places.objects.get(id = ident)
+ 		p.title = title
+ 		p.description = description
+ 		p.coordinate = coordinate
+ 		p.save()
 
-	 		return HttpResponse(json.dumps({'success': True}), 
-	 				content_type="json")
-	 	except:
-	 		return HttpResponse(json.dumps({
-									'success': False, 
-									'msg': 'Does not exist.'
-								}), content_type='json')
-	
-	else:
-		return HttpResponse(json.dumps({
-										'success': False, 
-										'msg': 'Invalid request method.'
-									}), content_type='json')
-
+ 		return HttpResponse(json.dumps({'success': True}), 
+ 				content_type="json")
+ 	except:
+ 		return HttpResponse(json.dumps({
+								'success': False, 
+								'msg': 'Does not exist.'
+							}), content_type='json')
 
 def delete(request, ident):
 	try:
