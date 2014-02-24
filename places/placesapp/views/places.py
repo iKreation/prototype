@@ -25,16 +25,6 @@ def rest(request, ident):
 								}), content_type='json')
 
 
-
-def hello(request, ident, category):
-	obj = {} # create dict
-	obj['ident'] = ident # set value of ident
-	obj['cenas'] = 'QUALQUER COISA'
-	obj['category'] = category
-
-	t = loader.get_template('hello_world.html')
-	return HttpResponse(t.render(RequestContext(request, obj)))
-
 def places_list(request):
 	# import model
 	# make the query to get all the places
@@ -145,3 +135,5 @@ def delete(request, ident):
 								'success': False, 
 								'msg': 'Does not exist.'
 							}), content_type='json')
+
+

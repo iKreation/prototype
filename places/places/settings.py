@@ -31,6 +31,11 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+MEDIA_DIRS = (
+    os.path.join(BASE_DIR, 'placesapp/media')
+    
+    )
+
 ALLOWED_HOSTS = []
 
 # Application definition
