@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
-from places.settings import MEDIA_DIRS
+from places.settings import STATIC_URL
 
 # Create your models here.
 
@@ -15,5 +15,5 @@ class Photos(models.Model):
 
 	place = models.ForeignKey(Places)
 	title = models.CharField(max_length=250)
-	photo = models.ImageField(('photo'), upload_to ='/MEDIA_DIRS')
+	photo = models.ImageField(('photo'), upload_to = STATIC_URL)
 
