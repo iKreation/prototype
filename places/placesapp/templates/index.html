@@ -11,10 +11,12 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="http://localhost:8000/static/styles/main.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
+
+
+        <script src="{{STATIC_URL}}/bower_components/modernizr/modernizr.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 
         <style>
@@ -133,7 +135,7 @@
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
-        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="http://localhost:8000/static/bower_components/jquery/jquery.js"></script>
 
         <!-- endbower -->
         <!-- endbuild -->
@@ -149,28 +151,27 @@
         </script>
 
         <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
+        <script src="http://localhost:8000/static/scripts/main.js"></script>
         <!-- endbuild -->
 
         <!-- build:js(.tmp) scripts/coffee.js -->
-        <script src="scripts/hello.js"></script>
+        <script src="http://localhost:8000/static/scripts/hello.js"></script>
         <!-- endbuild -->
 
         <!-- build:js scripts/plugins.js -->
-        <script src="bower_components/sass-bootstrap/js/affix.js"></script>
-        <script src="bower_components/sass-bootstrap/js/alert.js"></script>
-        <script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
-        <script src="bower_components/sass-bootstrap/js/tooltip.js"></script>
-        <script src="bower_components/sass-bootstrap/js/modal.js"></script>
-        <script src="bower_components/sass-bootstrap/js/transition.js"></script>
-        <script src="bower_components/sass-bootstrap/js/button.js"></script>
-        <script src="bower_components/sass-bootstrap/js/popover.js"></script>
-        <script src="bower_components/sass-bootstrap/js/carousel.js"></script>
-        <script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
-        <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
-        <script src="bower_components/sass-bootstrap/js/tab.js"></script>
+        <script src="http://localhost:8000/static/bower_components/sass-bootstrap/js/affix.js"></script>
+        <script src="http://localhost:8000/static/bower_components/sass-bootstrap/js/alert.js"></script>
+        <script src="http://localhost:8000/static/bower_components/sass-bootstrap/js/dropdown.js"></script>
+        <script src="http://localhost:8000/static/bower_components/sass-bootstrap/js/tooltip.js"></script>
+        <script src="http://localhost:8000/static/bower_components/sass-bootstrap/js/modal.js"></script>
+        <script src="http://localhost:8000/static/bower_components/sass-bootstrap/js/transition.js"></script>
+        <script src="http://localhost:8000/static/bower_components/sass-bootstrap/js/button.js"></script>
+        <script src="http://localhost:8000/static/bower_components/sass-bootstrap/js/popover.js"></script>
+        <script src="http://localhost:8000/static/bower_components/sass-bootstrap/js/carousel.js"></script>
+        <script src="http://localhost:8000/static/bower_components/sass-bootstrap/js/scrollspy.js"></script>
+        <script src="http://localhost:8000/static/bower_components/sass-bootstrap/js/collapse.js"></script>
+        <script src="http://localhost:8000/static/bower_components/sass-bootstrap/js/tab.js"></script>
         <!-- endbuild -->
-
 
         <script>
 

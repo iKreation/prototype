@@ -1,8 +1,13 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext, loader
 from placesapp.models import *
 import simplejson as json
 from django.views.decorators.csrf import csrf_exempt
+from django.shortcuts import render
+
+
+def index(request):
+	return render(request,'index.html')
 
 @csrf_exempt
 def rest(request, ident):
