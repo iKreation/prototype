@@ -97,24 +97,26 @@
             <div class="row" style="margin-top:40px;">
                 <div class="col-md-12" id="ops_container">
                     <div class="row" id="search_container">
-                        <div class="col-md-12">
-                            <h2 style="color:#f3f3f3;"> What do you need ? </h2>
-                            <div class="buttons_search">
-                                <button class="btn btn-default cafes" data-id='0'>Coffee</button>
-                                <button class="btn btn-default restaurantes" data-id='1'>Bar</button>
-                                <button class="btn btn-default bares" data-id='2'>Restaurant</button>
-                                <button class="btn btn-default hoteis" data-id='3'>Hotel</button>
+                        <div class="col-md-12" >
+                            <div id = "categories">
+                                <h2 style="color:#f3f3f3;"> What do you need ? </h2>
+                                <div class="buttons_search">
+                                    <button class="btn btn-default cafes" data-id='0'>Coffee</button>
+                                    <button class="btn btn-default restaurantes" data-id='1'>Bar</button>
+                                    <button class="btn btn-default bares" data-id='2'>Restaurant</button>
+                                    <button class="btn btn-default hoteis" data-id='3'>Hotel</button>
+                                </div>
                             </div>
                             <form role="form" id = "createForm" style="margin-top:40px; display: none;">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1" style="color:#f3f3f3">Insert Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Insert name">
+                                    <label for="exampleInputEmail1" style="color:#f3f3f3">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Insert name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1" style="color:#f3f3f3">Insert Description</label>
-                                    <textarea class="form-control" rows="3" id="description" placeholder="Insert Description"></textarea>
+                                    <label for="exampleInputEmail1" style="color:#f3f3f3">Description</label>
+                                    <textarea class="form-control" rows="3" id="description" name="description" placeholder="Insert Description"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-default">Submit</button>
+                                <button type="submit" class="btn btn-default" id="button_submit_Place" >Submit</button>
                             </form>
 
                         </div>  
@@ -183,6 +185,7 @@
 
             var selectedCategories = [0,0,0,0];
             var markerBounds = [];
+
             $(document).ready(function() {
                 $('.buttons_search .btn').on('click', function(evt) {
                     evt.preventDefault();
@@ -207,6 +210,16 @@
                     
                 });
             });
+
+
+            $('#button_submit_Place').on('click', function(evt) {
+                evt.preventDefault();
+
+               var data =  $('#createForm').serializeArray();
+               console.log(data);
+            });
+
+
             
 
 

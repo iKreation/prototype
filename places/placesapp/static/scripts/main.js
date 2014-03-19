@@ -3,6 +3,8 @@ var onspot = {
 	categories:null,
 	places: {},
 
+
+
 	initialize: function() {
 		
 		google.maps.event.addDomListener(window, 'load', this.initGoogleMaps);
@@ -95,7 +97,9 @@ var onspot = {
 	  	myListener = google.maps.event.addListener(window.onspotMap, 'click', function(event) {
 	        window.onspot.placeMarker(event.latLng);
 	        //google.maps.event.removeListener(myListener);
+	        $("#categories").hide();
 	        $("#createForm").show();
+
 	    });
 
 	  	window.onspot.addMarkersByCategories(0);
@@ -104,6 +108,8 @@ var onspot = {
 
 
 	placeMarker:function(location) {
+		
+		window.onspot.removeAllMarkers();
         var marker = new google.maps.Marker({
             position: location,
             map: window.onspotMap,
