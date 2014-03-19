@@ -62,6 +62,7 @@ def create(request):
 
 		try:
 			Places.objects.create(user_id = 1,
+								  category = Category.objects.get(id = 1),
 								  title = title, 
 								  description = description, 
 								  coordinate = coordinate)

@@ -2,6 +2,7 @@ var onspot = {
 
 	categories:null,
 	places: {},
+	currentMarker:null,
 
 
 
@@ -108,7 +109,7 @@ var onspot = {
 
 
 	placeMarker:function(location) {
-		
+
 		window.onspot.removeAllMarkers();
         var marker = new google.maps.Marker({
             position: location,
@@ -117,6 +118,7 @@ var onspot = {
         });
         //window.onspotMap.setCenter(location);
         var markerPosition = marker.getPosition();
+        window.onspot.currentMarker = location['A'] + ',' + location['K'];
         //populateInputs(markerPosition);
         //google.maps.event.addListener(marker, "drag", function (mEvent) {
            // populateInputs(mEvent.latLng);
