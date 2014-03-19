@@ -57,6 +57,10 @@ var onspot = {
 
 	initGoogleMaps: function() {
 		google.maps.visualRefresh = true;
+
+		
+
+        console.log("clickedCreate");
 		
 		var mapOptions = {
 	    	zoom: 13,
@@ -88,9 +92,29 @@ var onspot = {
 
 	  	window.onspotMap = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
 
+	  	myListener = google.maps.event.addListener(window.onspotMap, 'click', function(event) {
+	        window.onspot.placeMarker(event.latLng);
+	        //google.maps.event.removeListener(myListener);
+	        $("#createForm").show();
+	    });
+
 	  	window.onspot.addMarkersByCategories(0);
 		
 	},
+
+
+	placeMarker:function(location) {
+        var marker = new google.maps.Marker({
+            position: location,
+            map: window.onspotMap,
+            draggable: true
+        });
+        //window.onspotMap.setCenter(location);
+        var markerPosition = marker.getPosition();
+        //populateInputs(markerPosition);
+        //google.maps.event.addListener(marker, "drag", function (mEvent) {
+           // populateInputs(mEvent.latLng);
+    },
 
 	addMarkersByCategories: function() {
 
@@ -114,7 +138,7 @@ var onspot = {
 			bounds.extend(markerBounds[i]);
 		}
 
-		onspotMap.fitBounds(bounds);
+		window.onspotMap.fitBounds(bounds);
 
 		
 	},
@@ -194,3 +218,5 @@ $(document).ready(function() {
 	onspot.initialize();
 
 });
+
+$
