@@ -156,6 +156,12 @@ var onspot = {
 		markerBounds = [];
 	},
 
+	removeCurrentMarker: function() {
+		this.setAllMap(null);
+		markerBounds = [];
+		this.addMarkersByCategories();
+	},
+
 	// Sets the map on all markers in the array.
 	setAllMap: function(map){
 	  for (var i = 0; i < markers.length; i++) {
