@@ -118,7 +118,7 @@ var onspot = {
         });
         //window.onspotMap.setCenter(location);
         var markerPosition = marker.getPosition();
-        window.onspot.currentMarker = location['A'] + ',' + location['K'];
+        window.onspot.currentMarker = location['A'] + ',' + location['k'];
         //populateInputs(markerPosition);
         //google.maps.event.addListener(marker, "drag", function (mEvent) {
            // populateInputs(mEvent.latLng);
