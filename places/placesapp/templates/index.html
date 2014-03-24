@@ -131,7 +131,14 @@
                                 </div>
                                 <button type="submit" class="btn btn-default" id="button_submit_Place" >Submit</button>
                                 <button type="submit" class="btn btn-warning" id="button_cancel_Place" >Cancel</button>
+                                
                             </form>
+
+                            <div>
+                                <h1>
+                                <span class="label label-success" id="success_label" style="display: none; margin-top:40px;">New Place Added!</span>
+                                </h1>
+                            </div>
 
                         </div>  
                     </div>
@@ -244,6 +251,8 @@
                
                 $("#createForm").hide();  
                 $("#categories").show();
+                $("#success_label").show();
+                setTimeout(function() { $("#success_label").fadeOut(); }, 3000);
             });
 
 
@@ -253,6 +262,7 @@
                 window.onspot.removeCurrentMarker();
                 $("#createForm").hide();  
                 $("#categories").show();
+
             });
 
 
