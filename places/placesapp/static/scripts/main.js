@@ -69,6 +69,7 @@ var onspot = {
 	        window.onspot.placeMarker(event.latLng);
 	        //google.maps.event.removeListener(myListener);
 	        $("#categories").hide();
+	        $('#details_container').hide();
 	        $("#createForm").show();
 
 	    });
