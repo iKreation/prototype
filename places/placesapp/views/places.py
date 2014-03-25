@@ -42,6 +42,7 @@ def places_list(request):
 
 	for l in query:		
 		new_obj = {}
+		new_obj['category_id'] = l.category_id
 		new_obj['title'] = l.title
 		new_obj['description'] = l.description
 		new_obj['coordinate'] = l.coordinate

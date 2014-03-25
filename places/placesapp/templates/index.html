@@ -108,6 +108,9 @@
                                 </div>
                             </div>
                             <form role="form" id = "createForm" style="margin-top:40px; display: none;">
+                                <h2 style="color:#f3f3f3">
+                                    New Place
+                                </h2>
                                 
                                 <div class="form-group">
                                     <label for="exampleInputEmail1" style="color:#f3f3f3">Category</label>
@@ -135,9 +138,9 @@
                             </form>
 
                             <div>
-                                <h1>
+                                <h2>
                                 <span class="label label-success" id="success_label" style="display: none; margin-top:40px;">New Place Added!</span>
-                                </h1>
+                                </h2>
                             </div>
 
                         </div>  
@@ -252,7 +255,7 @@
                 $("#createForm").hide();  
                 $("#categories").show();
                 $("#success_label").show();
-                setTimeout(function() { $("#success_label").fadeOut(); }, 3000);
+                setTimeout(function() { $("#success_label").fadeOut(); }, 2000);
             });
 
 
