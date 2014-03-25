@@ -102,6 +102,7 @@ var onspot = {
 
 		this.removeAllMarkers(window.onspotMap);
 
+		
 		for(var i = 0; i < selectedCategories.length; i++) {
 			if(selectedCategories[i] == 1) {
 				for(var j = 0; j < this.places.length; j++) {
@@ -195,7 +196,10 @@ var onspot = {
 
 	  	infowindow.open(onspotMap,marker);
 
-	  	$('#details').html("<h2  style='color:#f3f3f3;'> Detalhes </h2> <h4 style='color:#f3f3f3;'>Nome</h4>" + obj.title + "<h4 style='color:#f3f3f3;'>Descricao</h4>" + obj.description  + "<h4 style='color:#f3f3f3;'>GPS</h4>" + obj.coordinate);
+	  	$('#details').html(
+	  		"<h2  style='color:#f3f3f3;'> Detalhes </h2> <h4 style='color:#f3f3f3;'>Nome</h4>" + obj.title + 
+	  		"<h4 style='color:#f3f3f3;'>Descricao</h4>" + obj.description  + 
+	  		"<h4 style='color:#f3f3f3;'>GPS</h4>" + obj.coordinate);
  		$('#details_container').show();
  	  });
 

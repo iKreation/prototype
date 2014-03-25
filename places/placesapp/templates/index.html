@@ -116,10 +116,10 @@
                                     <label for="exampleInputEmail1" style="color:#f3f3f3">Category</label>
                                     <select name="category" class="form-control">
 
-                                        <option value="1">Bar</option>
-                                        <option value="2">Hotel</option>
+                                        <option value="1">Coffe</option>
+                                        <option value="2">Bar</option>
                                         <option value="3">Restaurant</option>
-                                        <option value="4">Coffee </option>
+                                        <option value="4">Hotel </option>
 
                                     </select>
                                 </div>
@@ -221,11 +221,13 @@
 
 
                         selectedCategories[$($el).attr('data-id')] = 0;
+                        onspot.getPlaces();
                         onspot.addMarkersByCategories();
 
                     } else {
 
                         selectedCategories[$($el).attr('data-id')] = 1;
+                        onspot.getPlaces();
                         onspot.addMarkersByCategories();
 
                         $el.removeClass('btn-default');
@@ -243,13 +245,17 @@
 
                console.log(data);
 
-                    $.ajax({   
-                        type: "POST",
-                        dataType: "json", 
-                        cache: false,  
-                        url: "http://localhost:8000/places/0/",
-                        data: {category:  data[0].value, title: data[1].value, coordinate: window.onspot.currentMarker ,description: data[2].value }
-                    }); 
+                $.ajax({   
+                    type: "POST",
+                    dataType: "json", 
+                    cache: false,  
+                    url: "http://localhost:8000/places/0/",
+                    data: {category:  data[0].value, title: data[1].value, coordinate: window.onspot.currentMarker ,description: data[2].value }
+                });
+
+                window.onspot.places.push(data);
+                onspot.addMarkersByCategories();
+
 
                
                 $("#createForm").hide();  
